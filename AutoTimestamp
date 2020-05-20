@@ -1,0 +1,28 @@
+function onEdit(e){
+  
+  addTimestamp(e);
+  
+}
+
+function addTimestamp(e){
+  
+  //Variables
+  var startRow = 9;
+  var targetColumn = 3;
+  var ws = "Migration Tracker";
+  
+  //Get Target Row & Column
+  var row = e.range.getRow();
+  var col = e.range.getColumn();
+  
+  if(col >= targetColumn && row >= startRow && e.source.getActiveSheet().getName() === ws){
+    
+    var currentDate = new Date();
+    
+    e.source.getActiveSheet().getRange(row,1).setValue(new Date());
+    if(e.source.getActiveSheet().getRange(row,2).getValue() == ""){
+      e.source.getActiveSheet().getRange(row,2).setValue(new Date());
+    } // END IF check if date created exists
+  } // END IF check column, row, worksheet
+  
+} // END function addTimestamp
