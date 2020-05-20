@@ -1,0 +1,4 @@
+function toCST(dateTime, timeZone) {
+  var from = m.moment.tz(dateTime, timeZone);
+  return from.tz("US/Central").format('MM/DD/YYYY HH:mm:ss');
+}
