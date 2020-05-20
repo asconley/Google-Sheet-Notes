@@ -1,0 +1,4 @@
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  ui.alert('Welcome to the Migration Tracker! \r\n\r\n Start by creating a list of sites, you have 2 options: \r\n\r\n 1. Manually input sites in the Source Domains (S10) \r\n 2. Send the customer the site list form \r\n\r\n Notes: \r\n - You can only choose 1 option above \r\n - No need to edit any red columns. \r\n\r\n Forms available: \n - Site List Form \n - Final Sync Form \r\n\r\n Questions? Slack me @aconley');
+}
